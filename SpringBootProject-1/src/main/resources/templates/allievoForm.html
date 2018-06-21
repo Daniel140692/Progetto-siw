@@ -1,0 +1,60 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link href="../static/css/main.css" th:href="@{/css/main.css}"
+	rel="stylesheet" />
+
+</head>
+<body>
+	<div>
+		<h4 class="title">Inserisci un nuovo allievo</h4>
+		<p th:text="${exists}"></p>
+	</div>
+	<form th:action="@{/allievo}" method="POST" th:object="${allievo}">
+		<table>
+			<tr>
+				<td>Nome:</td>
+				<td><input type="text" th:field="*{nome}" /></td>
+				<td th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></td>
+			</tr>		
+			<tr>
+				<td>Cognome:</td>
+				<td><input type="text" th:field="*{cognome}" /></td>
+				<td th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}"></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="text" th:field="*{email}" /></td>
+				<td th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></td>
+			</tr>
+			<tr>
+			<tr>
+				<td>Numero di telefono:</td>
+				<td><input type="text" th:field="*{numTelefono}" /></td>
+				<td th:if="${#fields.hasErrors('numTelefono')}" th:errors="*{numTelefono}"></td>
+			</tr>
+			<tr>
+			<tr>
+				<td>Data di nascita:</td>
+				<td><input type="date" th:field="*{dataNascita}" /></td>
+				<td th:if="${#fields.hasErrors('dataNascita')}" th:errors="*{dataNascita}"></td>
+			</tr>
+			<tr>
+			<tr>
+				<td>Indirizzo:</td>
+				<td><input type="text" th:field="*{indirizzo}" /></td>
+				<td th:if="${#fields.hasErrors('indirizzo')}" th:errors="*{indirizzo}"></td>
+			</tr>
+			<tr>
+				<td><button type="submit">Inserisci</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

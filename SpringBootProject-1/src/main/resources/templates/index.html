@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link href="../static/css/main.css" th:href="@{/css/main.css}"
+	rel="stylesheet" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header"> </header>
+	<!-- Banner -->
+	<section id="banner">
+		<div class="inner">
+			<h1>Centro di formazione Industrious</h1>
+			<p>
+			</p>
+		</div>
+	</section>
+	<!-- Highlights -->
+	<section class="wrapper">
+		<div class="inner">
+			<header class="special">
+				<h2>Benvenuto Responsabile</h2>
+				<p>Qui potrai selezionare gli Allievi registrati e controllare
+					le Attivit&aacute giornaliere</p>
+			</header>
+			<div class="highlights">
+				<section>
+					<div class="content">
+						<header>
+							<a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
+							<h3>
+								<a th:href="@{/addAllievo}">Registra un nuovo allievo</a>
+							</h3>
+						</header>
+
+					</div>
+				</section>
+				<section>
+					<div class="content">
+						<header>
+							<a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
+							<h3>
+								<a th:href="@{/allievi}">Lista degli allievi iscritti</a>
+							</h3>
+						</header>
+						<p></p>
+					</div>
+				</section>
+				<section>
+					<div class="content">
+						<header>
+							<a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
+							<h3>
+								<a th:href="@{/addAttivita}">Registra una nuova Attività</a>
+							</h3>
+						</header>
+						<p></p>
+					</div>
+				</section>
+				<section>
+					<div class="content">
+						<header>
+							<a href="#" class="icon fa-files-o"><span class="label">Icon</span></a>
+							<h3>
+								<a th:href="@{/attivita}">Lista delle attività registrate</a>
+							</h3>
+						</header>
+						<p></p>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+
+</html>

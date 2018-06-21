@@ -1,0 +1,42 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<title>Allievi</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link href="../static/css/main.css" th:href="@{/css/main.css}"
+	rel="stylesheet" />
+
+</head>
+<body>
+	<div>
+		<h4>Lista allievi:</h4>
+		<div>
+			<table>
+				<tr>
+					<th>Nome:</th>
+					<th>Cognome:</th>
+					<th>Email:</th>
+					<th>Num telefono:</th>
+					<th>Data di nascita:</th>
+				</tr>
+				<tr th:each="allievo : ${allievi}">
+					<td><span th:text="${allievo.nome}"></span></td>
+					<td><span th:text="${allievo.cognome}"></span></td>
+					<td><span th:text="${allievo.email}"></span></td>
+					<td><span th:text="${allievo.numTelefono}"></span></td>
+					<td><span th:text="${allievo.indirizzo}"></span></td>
+					<td><span th:text="${allievo.dataNascita}"></span></td>
+
+					<td><a th:href="@{'/allievo' + '/' + ${allievo.id}}"><span>DETTAGLI</span></a></td>
+
+
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

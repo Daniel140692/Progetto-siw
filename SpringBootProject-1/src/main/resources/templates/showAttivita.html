@@ -1,0 +1,26 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link href="../static/css/main.css" th:href="@{/css/main.css}"
+	rel="stylesheet" />
+
+<title>Pagina attività</title>
+</head>
+<body>
+	<div>
+		<h4>Attività:</h4>
+		<div>
+			<span th:text="${attivita.nome}"></span>
+		</div>
+		<!--  	<div>
+			<span th:date="${attivita.dataSvolgimento}"></span>
+		</div>
+		-->
+		</div>
+</body>
+</html>
